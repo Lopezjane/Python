@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie-edge">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<title>Student Management v1.0</title>
+	</head>
+	<body>
+		<div class="w3-bar w3-green w3-container w3-padding">
+			<h3>{{ pagetitle }}</h3>
+		</div>
+		<div class=w3-container w3-padding>
+		<table class="w3-table-all">
+			<tr>
+				<th>IDNO</th>
+				<th class="w3-hide-small">LASTNAME</th>
+				<th class="w3-hide-small">FIRSTNAME</th>
+				<th class="w3-hide-large w3-hide-medium">NAME</th>
+					
+				<th>COURSE</th>
+				<th>LEVEL</th>
+			</tr>	
+			{% for student in data %}
+			<tr>
+				<td>{{ student['idno'] }}</td>
+				<td class="w3-hide-small">{{ student['lastname'] }}</td>
+				<td class="w3-hide-small">{{ student['firstname'] }}</td>
+					
+				<td class="w3-hide-large w3-hide-medium">{{ student['lastname'] }},{{ student['firstname'] }}</td>
+				<td class=>{{ student['course'] }}</td>
+				<td class=>{{ student['level'] }}</td>
+			</tr>
+			{% endfor %}
+		</table>
+		</div>
+	</body>
+</html>
